@@ -1,13 +1,475 @@
-body {
+*,
+*::before,
+*::after {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  box-sizing: border-box;
+}
+#root {
+  padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(54, 54, 54);
+  color: rgb(19, 18, 18);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+/* Nav bar */
+.nav-wrapper {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 7px 7px rgb(68, 74, 78);
+  z-index: 5;
+  background-color: rgb(203, 203, 252);
+  color: #333;
+}
+.nav-container {
+  width: 95vw;
+  max-width: 867px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav-container button {
+  margin: 0.3rem;
+  padding: 0.25rem;
+  font-size: 0.8rem;
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  transition: all 0.3s linear;
+}
+
+.nav-container button:hover {
+  background-color: rgb(155, 155, 247);
+}
+
+@media screen and (min-width: 768px) {
+  .nav-container button {
+    font-size: 1.3rem;
+  }
+}
+
+/* footer */
+.footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 7px 7px rgb(68, 74, 78);
+  background-color: rgb(203, 203, 252);
+}
+.footer-container {
+  display: flex;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+.footer-center li {
+  padding: 0.25rem;
+  margin: 0 0.2rem;
+  animation: all 0.3s linear;
+}
+.footer-center li.copy {
+  font-size: 0.8rem;
+  color: #333;
+  font-weight: 700;
+}
+@media screen and (min-width: 568px) {
+  .footer-center li.copy {
+    font-size: 1.1rem;
+  }
+}
+.footer-center svg {
+  font-size: 1.6rem;
+  color: #333;
+}
+/* home */
+main.home-screen {
+  margin-top: 4rem;
+  z-index: 1;
+  height: 100vh;
+}
+.text {
+  height: 100vh;
+}
+.image-container {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}
+.bona-image {
+  object-fit: cover;
+  border-radius: 50%;
+}
+p.name {
+  color: whitesmoke;
+  font-size: 1.3rem;
+  text-align: center;
+}
+span.nick {
+  display: block;
+  color: rgb(194, 255, 252);
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  border-left: 1px solid rgb(194, 255, 252);
+  width: max-content;
+  padding-left: 7px;
+}
+.typewriter {
+  display: flex;
+}
+span.title {
+  width: 26ch;
+  overflow: hidden;
+  color: rgb(243, 207, 0);
+  border-right: 1px solid rgb(243, 207, 0);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typewriter 3.5s steps(26, end), blink-caret 0.75s step-end infinite;
+}
+/* The typewriter effect */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 26ch;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(243, 207, 0);
+  }
+}
+
+.welcome {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+p {
+  text-align: center;
+  color: whitesmoke;
+  margin-top: 2rem;
+}
+.down {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 2rem;
+  margin-top: 12vh;
+}
+.downn {
+  color: whitesmoke;
+}
+@media screen and (min-width: 768px) {
+  .down {
+    margin-top: 17vh;
+  }
+}
+/* projects */
+.projects {
+  background-color: rgb(77, 77, 77);
+  color: whitesmoke;
+  text-align: center;
+}
+.projects > h2 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  padding: 0.5rem;
+  border-bottom: 7px solid whitesmoke;
+  width: max-content;
+  text-align: center;
+}
+.projects-container {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  row-gap: 2rem;
+  padding-bottom: 3rem;
+}
+.single-project {
+  border: 1px solid rgb(255, 255, 255);
+}
+.project-texts h3 {
+  text-transform: capitalize;
+}
+.project-texts .btn {
+  font-weight: 700;
+  padding: 0.1rem;
+  animation: all 0.3s linear;
+  margin: 0.3rem;
+}
+.project-texts .btn:hover {
+  background-color: inherit;
+  color: whitesmoke;
+}
+.tech {
+  display: block;
+  color: rgb(194, 255, 252);
+  font-size: 0.7rem;
+  text-align: center;
+  margin: 0 auto;
+  border-left: 1px solid rgb(194, 255, 252);
+  width: max-content;
+  padding-left: 7px;
+}
+@media screen and (min-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+  }
+}
+
+.skills {
+  background-color: rgb(54, 54, 54);
+  color: whitesmoke;
+  text-align: center;
+}
+.skills > h2 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  padding: 0.5rem;
+  border-bottom: 7px solid whitesmoke;
+  width: max-content;
+  text-align: center;
+}
+.skills-container {
+  padding-bottom: 7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.skill-body {
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .skill-body {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.skill-body li:nth-child(2n + 2) {
+  border-bottom: 1px solid white;
+}
+main.about-container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 3rem;
+  background-image: url("./images/rsz_bona-beside-a-car.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.about-container h2 {
+  text-align: center;
+  color: rgb(248, 248, 248);
+  width: max-content;
+  margin: 0 auto;
+  padding-bottom: 7px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  position: relative;
+  background-color: rgba(19, 18, 18, 0.596);
+}
+@media screen and (max-width: 767px) {
+  .about-container h2 {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about-container p {
+    font-size: 1rem;
+  }
+}
+.about-container h2::after {
+  content: "";
+  background-color: rebeccapurple;
+  width: 50px;
+  height: 7px;
+  position: absolute;
+  top: 83%;
+  left: 35%;
+}
+
+.about-container p {
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40ch;
+  letter-spacing: 0.05rem;
+  text-align: left;
+  color: rgb;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.589);
+  padding: 0 1rem;
+}
+.about-container div {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 968px) {
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+  }
+}
+main.contact-screen {
+  width: 40ch;
+  text-align: center;
+  margin: 4rem auto;
+  font-size: 1rem;
+}
+.reach-me > p {
+  color: coral;
+  font-size: 2rem;
+}
+main.learn {
+  height: 100vh;
+  display: flex;
+}
+
+.learn-container {
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.learn-container h2 {
+  font-size: 1rem;
+  width: 26ch;
+  overflow: hidden;
+  color: rgb(243, 207, 0);
+  border-right: 5px solid rgb(243, 207, 0);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typewriter 3.5s steps(26, end), blink-caret 0.75s step-end infinite;
+}
+/* The typewriter effect */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 26ch;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(243, 207, 0);
+  }
+}
+@media screen and (min-width: 768px) {
+  .learn-container h2 {
+    font-size: 2rem;
+  }
+}
+.error-screen {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error-container svg {
+  font-size: 7rem;
+  animation-name: shake;
+  animation-duration: 0.85s;
+  animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  animation-fill-mode: both;
+  animation-iteration-count: 4;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.error-text {
+  font-size: 1rem;
+}
+.go-home {
+  margin-top: 2rem;
+}
+.go-home button {
+  font-size: 1rem;
+  color: whitesmoke;
+  background-color: blue;
+  transition: all 0.3s linear;
+  border-radius: 7px;
+  border-color: transparent;
+  padding: 0.25rem;
+}
+.go-home button:hover {
+  background-color: purple;
 }

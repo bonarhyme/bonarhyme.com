@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.190e44fd.chunk.css",
+    "main.js": "/static/js/main.6f3cdded.chunk.js",
+    "main.js.map": "/static/js/main.6f3cdded.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.060edc1b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.060edc1b.js.map",
+    "static/js/2.9db258b3.chunk.js": "/static/js/2.9db258b3.chunk.js",
+    "static/js/2.9db258b3.chunk.js.map": "/static/js/2.9db258b3.chunk.js.map",
+    "static/js/3.6c722c47.chunk.js": "/static/js/3.6c722c47.chunk.js",
+    "static/js/3.6c722c47.chunk.js.map": "/static/js/3.6c722c47.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.190e44fd.chunk.css.map": "/static/css/main.190e44fd.chunk.css.map",
+    "static/js/2.9db258b3.chunk.js.LICENSE.txt": "/static/js/2.9db258b3.chunk.js.LICENSE.txt",
+    "static/media/chat-room.1828b850.PNG": "/static/media/chat-room.1828b850.PNG",
+    "static/media/chloropleth-with-d3.187af18e.jpg": "/static/media/chloropleth-with-d3.187af18e.jpg",
+    "static/media/colortsgenerator.44450aa7.PNG": "/static/media/colortsgenerator.44450aa7.PNG",
+    "static/media/eziafia2.5df5af1d.jpg": "/static/media/eziafia2.5df5af1d.jpg",
+    "static/media/heat-map-with-d3.e7daae67.jpg": "/static/media/heat-map-with-d3.e7daae67.jpg",
+    "static/media/imperial-converter.863b2903.PNG": "/static/media/imperial-converter.863b2903.PNG",
+    "static/media/me.f851c436.jpg": "/static/media/me.f851c436.jpg",
+    "static/media/react-projects-image.0265c8d8.png": "/static/media/react-projects-image.0265c8d8.png",
+    "static/media/index.css": "/static/media/rsz_bona-beside-a-car.11347409.jpg",
+    "static/media/tree-map-with-d3.41d476aa.jpg": "/static/media/tree-map-with-d3.41d476aa.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.060edc1b.js",
+    "static/js/2.9db258b3.chunk.js",
+    "static/css/main.190e44fd.chunk.css",
+    "static/js/main.6f3cdded.chunk.js"
+  ]
+}
