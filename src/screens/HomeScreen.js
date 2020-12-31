@@ -39,8 +39,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div id="projects" className="projects">
-        <h2>Projects</h2>
+      <div className="projects">
+        <h2 id="projects">Projects</h2>
         <Projects />
       </div>
       <div id="skills" className="skills">

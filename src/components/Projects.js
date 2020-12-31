@@ -16,6 +16,7 @@ const Projects = () => {
                 width="100%"
                 height="100%"
                 className="project-image"
+                loading="lazy"
               />
             </div>
             <div className="project-texts">
